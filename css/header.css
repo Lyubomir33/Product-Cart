@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&display=swap');
+* { 
+  margin: 0;
+  padding: 0;
+
+}
+
+.above-container {
+  display: flex;
+}
+
+.wave-container {
+  width: 100%;
+  height: 160px;
+  background: url(/images/white-background-option_cleanup.jpg);
+  box-shadow: 1px 1px 5px #00000054;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom -42px right 0px;
+  
+}
+
+.text-in-header {
+font-size: 26px;
+font-family: 'Exo 2', sans-serif;
+}
+
+.logo-image {
+  height: 107px;
+    padding-bottom: 20px;
+}
+
+
+@media (min-width: 920px) {
+  .logo-image {
+    height: 140px;
+    
+  }
+
+  .text-in-header {
+    font-size: 32px;
+    font-family: 'Exo 2', sans-serif;
+    }
+
+    .wave-container {
+      background-position: bottom -80px right 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+  .wave-container {
+    background-position: bottom -120px right 0px;
+  }
+}
