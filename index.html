@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/логото-снимка-removebg-preview.png">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Начална страница</title>
+</head>
+
+<body>
+
+  <!-- HEADER START -->
+
+
+  <div class="wave-container">
+
+    <img class="logo-image" src="/images/логото-снимка-removebg-preview.png" alt="logo-image">
+
+    <p class="text-in-header">SMART VENDING AUTOMATION</p>
+
+
+  </div>
+
+
+  <!-- HEADER END -->
+
+
+  <!-- MAIN START -->
+
+
+
+  <div class="drinks-food-snacks">
+
+
+
+    <button class="options" data-filter="all">SHOW ALL</button>
+    <button class="options" data-filter="drinks">DRINKS</button>
+    <button class="options" data-filter="food">FOOD</button>
+    <button class="options" data-filter="snacks">SNACKS</button>
+    <button class="options" data-filter="cans">CANS</button>
+
+  </div>
+
+
+  <div class="arrows-with-main">
+
+
+    <div class="arrow-left">
+      <i class="fa-solid fa-arrow-left"></i>
+    </div>
+
+
+    <!-- PRODUCTS START -->
+
+    <div class="container-with-products">
+
+      <!-- <div class="product-item">
+        <div class="image-wrapper"><img class="image-prodcuts" src="/images/7 days.jpg"></div>
+        <h2 class="product-name">7 days</h2>
+        <p class="product-price">2лв.</p>
+        <p class="buy-btn"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
+      </div> -->
+
+
+    </div>
+
+
+    <!-- PRODUCTS END -->
+
+
+    <div class="arrow-right">
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+
+  </div>
+
+  <!-- MAIN END -->
+
+
+
+
+  <!-- FOOTER START -->
+
+
+  <div class="footer-container">
+
+
+
+
+
+    <div class="checkout">
+
+      <div class="cart-part">
+        <i class="fa-solid fa-cart-plus"></i>
+        <i class="fa-solid fa-circle-arrow-right"></i>
+      </div>
+
+      <div class="all-products-footer">
+
+        <!-- <div class="product-list">
+          <div class="product-div">
+            <div class="image-list"><img class="image-for-list" src="/images/7 days.jpg"></div>
+            <p class="list-product-price">2лв.</p>
+          </div>
+          <div class="number">
+            <span id="minus"><i class="fa-solid fa-minus"></i></span>
+            <input id="input-numbers" class="value-input" type="text" value="1" />
+            <span id="plus"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <button class="removeBtn">Премахни</button>
+        </div>
+
+        <div class="product-list">
+
+          <div class="product-div">
+            <div class="image-list"><img class="image-for-list" src="/images/7 days.jpg"></div>
+            <p class="list-product-price">2лв.</p>
+          </div>
+          <div class="number">
+            <span id="minus"><i class="fa-solid fa-minus"></i></span>
+            <input id="input-numbers" class="value-input" type="text" value="1" />
+            <span id="plus"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <button class="removeBtn">Премахни</button>
+        </div>
+ -->
+
+
+
+
+      </div>
+
+      <div class="final-price-continueButton">
+
+        <div class="final-price">
+          <p disabled id="totalSum"></p>
+        </div>
+
+        <div class="continue-button">
+          <button>ПРОДЪЛЖИ</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+  <!-- FOOTER END -->
+
+  <script>
+
+
+
+
+
+
+
+    let products = [
+
+      { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
+      { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
+      { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
+      { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+
+      { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
+      { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
+      { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
+      { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+
+      { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
+      { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
+      { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
+      { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+
+      { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
+      { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
+      { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
+      { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+
+    ];
+
+
+    $(document).ready(function () {
+
+
+      let optionsBtn = $('.options');
+      let containerProducts = $('.container-with-products');
+      let footerProducts = $('.all-products-footer');
+
+
+      optionsBtn.on('click', function () {
+
+        optionsBtn.removeClass('active');
+
+        $(this).toggleClass('active');
+
+      });
+
+
+
+
+
+      $.each(products, function (index, product) {
+        let productElement = $(`
+    <div class="product-item" id="${product.id}">
+      <div class="image-wrapper"><img class="image-prodcuts" src="/images/${product.url}"></div>
+      <h2 class="product-name">${product.title}</h2>
+      <p class="product-price">${product.price}</p>
+      <p class="buy-btn" data-product-id="${product.id}"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
+    </div>`);
+
+        containerProducts.append(productElement);
+      });
+
+
+
+
+
+      let addedProducts = new Set();  // Initialize a set to store added product ids
+
+let addProduct = $('.buy-btn');
+
+addProduct.on('click', function () {
+  let parentElement = $(this).parent();
+  let id = $(this).data('product-id');
+  let image = parentElement.find('.image-prodcuts').attr('src');
+  let price = parentElement.find('.product-price').text();
+
+  if (footerProducts.children('.product-list').length >= 3) {
+    alert('Достигнат лимит на количката - 3 продукта!');
+    return;
+  }
+
+  if (addedProducts.has(id)) {
+    alert('Продуктът вече е добавен в количката!');
+    return;
+  }
+
+  addedProducts.add(id); 
+
+  footerProducts.append(`
+      <div class="product-list" id="${id}">
+        <div class="product-div">
+          <div class="image-list"><img class="image-for-list" src="${image}"></div>
+          <p class="list-product-price">${price}</p>
+        </div>
+        <div class="number">
+          <span id="minus"><i class="fa-solid fa-minus"></i></span>
+          <input id="input-numbers" class="value-input" type="text" value="1" />
+          <span id="plus"><i class="fa-solid fa-plus"></i></span>
+        </div>
+        <button class="removeBtn">Премахни</button>
+      </div>
+  `);
+
+  let removeBtn = $('.removeBtn');
+
+  removeBtn.on('click', function () {
+    addedProducts.delete(id);  // Remove the product id from the set when removed from the cart
+    $(this).parent('div').remove();
+  });
+});
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
