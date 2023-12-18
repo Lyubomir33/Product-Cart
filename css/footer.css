@@ -224,13 +224,13 @@ span {cursor:pointer; }
 }
 
 .swiper-wrapper, #swiper-wrapper-c1c9cd1e10713a197  {
+  
   position: relative!important; 
-    width: auto!important;
+    width: 20000px!important;
     height: auto!important;
     /* z-index: 1; */
     display: grid!important;
-    grid-template-columns: repeat(auto-fit, minmax(385px, 1fr))!important;
-  
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))!important;
     /* transition-property: transform; */
     box-sizing: content-box!important;
 }
