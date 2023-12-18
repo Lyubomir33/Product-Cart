@@ -10,8 +10,8 @@
   padding: 15px;
   height: auto;
   border-radius: 8px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); */
   justify-items: center;
   align-items: center;
   align-content: space-between;
@@ -182,9 +182,9 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-  .container-with-products {
+  /* .container-with-products {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
+  } */
 
   .drinks-food-snacks {
     width: 75%;
@@ -192,7 +192,7 @@ h2 {
 }
 
 @media (min-width: 1200px) {
-  .container-with-products {
+  /* .container-with-products {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
+  } */
 }

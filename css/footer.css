@@ -77,11 +77,12 @@ html {
 }
 
 .container-with-products {
-  display: grid;
+  /* display: grid; */
   width: 51%;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   background-color: white;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.238);
+  overflow-y: hidden;
 }
 
 .image-bought-products {
@@ -215,3 +216,22 @@ span {cursor:pointer; }
     margin: 0 35px;
 
 }
+
+#toast-container>div {
+
+  transition: 0.5s;
+  top: 250px;
+}
+
+.swiper-wrapper, #swiper-wrapper-c1c9cd1e10713a197  {
+  position: relative!important; 
+    width: auto!important;
+    height: auto!important;
+    /* z-index: 1; */
+    display: grid!important;
+    grid-template-columns: repeat(auto-fit, minmax(385px, 1fr))!important;
+  
+    /* transition-property: transform; */
+    box-sizing: content-box!important;
+}
+

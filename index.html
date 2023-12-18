@@ -12,6 +12,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js "></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <title>Начална страница</title>
 </head>
 
@@ -52,40 +56,35 @@
 
   <div class="arrows-with-main">
 
-
     <div class="arrow-left">
-      <i class="fa-solid fa-arrow-left"></i>
     </div>
-
-
+  
     <!-- PRODUCTS START -->
+  
+    <div class="swiper-container container-with-products">
+      <div class="swiper-wrapper">
+        <!-- Swiper will dynamically add slides here -->
+      </div>
 
-    <div class="container-with-products">
+      <div class="swiper-button-next">
+      </div>
 
-      <!-- <div class="product-item">
-        <div class="image-wrapper"><img class="image-prodcuts" src="/images/7 days.jpg"></div>
-        <h2 class="product-name">7 days</h2>
-        <p class="product-price">2лв.</p>
-        <p class="buy-btn"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
-      </div> -->
-
-
+      <div class="swiper-button-prev">
+      </div>
+      
     </div>
-
-
+  
     <!-- PRODUCTS END -->
-
-
+  
     <div class="arrow-right">
-      <i class="fa-solid fa-arrow-right"></i>
-    </div>
-
-  </div>
-
+    </div> 
+  
+  </div> 
+  
   <!-- MAIN END -->
 
 
-
+</div>
 
   <!-- FOOTER START -->
 
@@ -166,8 +165,6 @@
 
 
 
-
-
     let products = [
 
       { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
@@ -210,48 +207,77 @@
       });
 
 
-
-
-
       $.each(products, function (index, product) {
-        let productElement = $(`
-    <div class="product-item" id="${product.id}">
-      <div class="image-wrapper"><img class="image-prodcuts" src="/images/${product.url}"></div>
-      <h2 class="product-name">${product.title}</h2>
-      <p class="product-price">${product.price}</p>
-      <p class="buy-btn" data-product-id="${product.id}"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
-    </div>`);
+      let productSlide = $(`
+        <div class="swiper-slide">
+          <div class="product-item" id="${product.id}">
+            <div class="image-wrapper"><img class="image-prodcuts" src="/images/${product.url}"></div>
+            <h2 class="product-name">${product.title}</h2>
+            <p class="product-price">${product.price}</p>
+            <p class="buy-btn" data-product-id="${product.id}"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
+          </div>
+        </div>`);
 
-        containerProducts.append(productElement);
-      });
+      $('.swiper-wrapper').append(productSlide);
+    });
 
 
 
 
 
-      let addedProducts = new Set();  // Initialize a set to store added product ids
+      let addedProducts = new Set();
 
-let addProduct = $('.buy-btn');
+      let addProduct = $('.buy-btn');
 
-addProduct.on('click', function () {
-  let parentElement = $(this).parent();
-  let id = $(this).data('product-id');
-  let image = parentElement.find('.image-prodcuts').attr('src');
-  let price = parentElement.find('.product-price').text();
+      addProduct.on('click', function () {
+        let parentElement = $(this).parent();
+        let id = $(this).data('product-id');
+        let image = parentElement.find('.image-prodcuts').attr('src');
+        let price = parentElement.find('.product-price').text();
 
-  if (footerProducts.children('.product-list').length >= 3) {
-    alert('Достигнат лимит на количката - 3 продукта!');
-    return;
-  }
+        if (footerProducts.children('.product-list').length >= 3) {
+          toastr["error"]("Достингат е максималния лимит на количката - 3.", "", {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "1500",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    });          return;
+        }
 
-  if (addedProducts.has(id)) {
-    alert('Продуктът вече е добавен в количката!');
-    return;
-  }
+        if (addedProducts.has(id)) {
+          toastr["warning"]("Продуктът вече е добавен в количката!", "", {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    });          return;
+        }
 
-  addedProducts.add(id); 
+        addedProducts.add(id);
 
-  footerProducts.append(`
+        footerProducts.append(`
       <div class="product-list" id="${id}">
         <div class="product-div">
           <div class="image-list"><img class="image-for-list" src="${image}"></div>
@@ -266,13 +292,13 @@ addProduct.on('click', function () {
       </div>
   `);
 
-  let removeBtn = $('.removeBtn');
+        let removeBtn = $('.removeBtn');
 
-  removeBtn.on('click', function () {
-    addedProducts.delete(id);  // Remove the product id from the set when removed from the cart
-    $(this).parent('div').remove();
-  });
-});
+        removeBtn.on('click', function () {
+          addedProducts.delete(id);  // Remove the product id from the set when removed from the cart
+          $(this).parent('div').remove();
+        });
+      });
 
 
 
@@ -280,9 +306,15 @@ addProduct.on('click', function () {
 
     });
 
-
-
-
+    var swiper = new Swiper('.container-with-products', {
+      slidesPerView: 3,  // Adjust this according to your design
+      spaceBetween: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    
 
 
   </script>
