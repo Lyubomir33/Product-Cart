@@ -59,7 +59,6 @@ html {
 .fa-solid.fa-cart-shopping,
 .fa-solid.fa-arrow-right.footer {
 
-  font-size: 100px;
   cursor: pointer;
 }
 
@@ -107,7 +106,7 @@ html {
 }
 
 .final-price-continueButton {
-  width: 25%;
+  width: 289px;
   height: 100px;
   display: flex;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.249);
@@ -130,26 +129,33 @@ html {
 .continue-button {
   flex: 1;
   display: flex;
-  justify-content: center;
-    height: 100%;
-    width: 100%;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+
 }
 
+
 .continue-button button {
-  width: 100%;
+  width: 65%;
+  margin: 10px;
   opacity: transparent;
   border: none;
   font-size: 18px;
+  box-shadow: 4px 4px 0 black;
+  border-radius: 8px;
 }
 
 .continue-button button:hover { 
   transition: 0.6s;
-  background-color: black;
-  color: white;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  opacity: 0.8;
 
 }
+
+.continue-button:active  {
+  margin-top: 3px;
+}
+
 
 .continue-button button:not(:hover) {
    transition: 0.6s;
@@ -197,7 +203,7 @@ span {cursor:pointer; }
 }
 
 .cart-part {
-  font-size: 100px;
+  font-size: 150px; 
   display: flex;
   justify-content: space-evenly;
   align-items: center;

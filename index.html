@@ -509,9 +509,13 @@
         let removeBtn = $('.removeBtn');
 
         removeBtn.on('click', function () {
-          addedProducts.delete(id);  // Remove the product id from the set when removed from the cart
+
+          addedProducts.delete(id);  
+
           $(this).parent('div').remove();
+
         });
+        
       });
 
       let optionsBtn = $('.options');
@@ -521,8 +525,11 @@
 
 
       optionsBtn.on('click', function () {
+
         optionsBtn.removeClass('active');
+
         $(this).toggleClass('active');
+
         let value = $(this).data('filter');
 
         if (value === 'all') {
