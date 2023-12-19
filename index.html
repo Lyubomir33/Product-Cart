@@ -108,7 +108,7 @@
         <!-- <div class="product-list">
           <div class="product-div">
             <div class="image-list"><img class="image-for-list" src="/images/7 days.jpg"></div>
-            <p class="list-product-price">2лв.</p>
+            <p class="list-product-price">2</p>
           </div>
           <div class="number">
             <span id="minus"><i class="fa-solid fa-minus"></i></span>
@@ -122,7 +122,7 @@
 
           <div class="product-div">
             <div class="image-list"><img class="image-for-list" src="/images/7 days.jpg"></div>
-            <p class="list-product-price">2лв.</p>
+            <p class="list-product-price">2</p>
           </div>
           <div class="number">
             <span id="minus"><i class="fa-solid fa-minus"></i></span>
@@ -141,7 +141,7 @@
       <div class="final-price-continueButton">
 
         <div class="final-price">
-          <p disabled id="totalSum"></p>
+          <input disabled id="totalSum"></input>
         </div>
 
         <div class="continue-button">
@@ -168,245 +168,245 @@
 
       let products = [
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50лв.", quantity: 0, id: 0 },
-        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50лв.', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49лв.', quantity: 0, id: 3 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
+        { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99лв.', quantity: 0, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99лв.', quantity: 0, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7лв.', quantity: 0, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90лв.', quantity: 0, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90лв.', quantity: 0, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20лв.', quantity: 0, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50лв.', quantity: 0, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2лв.', quantity: 0, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50лв.', quantity: 0, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50лв.', quantity: 0, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50лв.', quantity: 0, id: 14 },
-        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50лв.', quantity: 0, id: 15 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
+        { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
       ];
 
@@ -422,7 +422,7 @@
           <div class="product-item" id="${product.id}" ">
             <div class="image-wrapper"><img class="image-prodcuts" src="/images/${product.url}"></div>
             <h2 class="product-name">${product.title}</h2>
-            <p class="product-price">${product.price}</p>
+            <p data-addProdPrice = "${product.price}" class="product-price">${product.price}</p>
             <p class="buy-btn" data-product-id="${product.id}"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
           </div>
         </div>`);
@@ -440,14 +440,16 @@
       let addProduct = $('.buy-btn');
 
       addProduct.on('click', function () {
+
         let parentElement = $(this).parent();
         let id = $(this).data('product-id');
+
         let image = parentElement.find('.image-prodcuts').attr('src');
         let price = parentElement.find('.product-price').text();
 
 
-
         if (footerProducts.children('.product-list').length >= 3) {
+
           toastr["error"]("Достингат е максималния лимит на количката - 3.", "", {
             "closeButton": true,
             "debug": false,
@@ -464,7 +466,9 @@
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-          }); return;
+          });
+
+          return;
         }
 
         if (addedProducts.has(id)) {
@@ -505,17 +509,31 @@
   `);
 
 
+        let numberPrice = parseFloat(price);
+
+        let totalSum = parseFloat($('#totalSum').val()) || 0;
+
+        if (footerProducts.children('.product-list').length > 3) {
+          preventDefaul(totalSum);
+        }
+
+        totalSum += numberPrice;
+
+        $('#totalSum').val(`${totalSum.toFixed(2)} лв.`);
+
+
+
 
         let removeBtn = $('.removeBtn');
 
         removeBtn.on('click', function () {
 
-          addedProducts.delete(id);  
+          addedProducts.delete(id);
 
           $(this).parent('div').remove();
 
         });
-        
+
       });
 
       let optionsBtn = $('.options');
