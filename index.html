@@ -141,7 +141,7 @@
       <div class="final-price-continueButton">
 
         <div class="final-price">
-          <input disabled id="totalSum"></input><span>лв.</span>
+          <input disabled id="totalSum"></input>
         </div>
 
         <div class="continue-button">
@@ -168,24 +168,24 @@
 
       let products = [
 
-        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 5, id: 0 },
+        { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 0, id: 0 },
         { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 10, id: 2 },
-        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 3, id: 3 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 2 },
+        { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 0, id: 3 },
 
-        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 2, id: 4 },
-        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 4, id: 5 },
-        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 4, id: 6 },
-        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 4, id: 7 },
+        { url: 'chicken.jpg', category: 'food', title: 'Пиле на фурна с гарнитура', price: '11.99', quantity: 0, id: 4 },
+        { url: 'pasta.jpg', category: 'food', title: 'Паста 300гр.', price: '4.99', quantity: 0, id: 5 },
+        { url: 'sandwich.jpg', category: 'food', title: 'Клуб Сандвич', price: '7', quantity: 0, id: 6 },
+        { url: 'pizza.jpg', category: 'food', title: 'Пица Пеперони', price: '9.90', quantity: 0, id: 7 },
 
-        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 4, id: 8 },
-        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 4, id: 9 },
-        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 4, id: 10 },
-        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 4, id: 11 },
+        { url: 'xl.jpg', category: 'snacks', title: 'Протеинови барове XL', price: '24.90', quantity: 0, id: 8 },
+        { url: 'mars-desert.jpg', category: 'snacks', title: 'Десерт Mars', price: '2.20', quantity: 0, id: 9 },
+        { url: 'bake-rolls.jpg', category: 'snacks', title: 'Пакет Bake Rolls 330гр.', price: '2.50', quantity: 0, id: 10 },
+        { url: '7 days.jpg', category: 'snacks', title: 'Кроасан 7 days с шоколад.', price: '2', quantity: 0, id: 11 },
 
-        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 4, id: 12 },
-        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 4, id: 13 },
-        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 4, id: 14 },
+        { url: 'coca-cola.jpg', category: 'cans', title: 'Coca-cola кен', price: '1.50', quantity: 0, id: 12 },
+        { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 0, id: 13 },
+        { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 0, id: 14 },
         { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
 
 
@@ -209,10 +209,7 @@
           </div>
         </div>`);
 
-        if(product.quantity>1){
-          $('.swiper-wrapper').append(productSlide);
-        }
-        
+        $('.swiper-wrapper').append(productSlide);
       });
 
 
@@ -288,8 +285,8 @@
         </div>
         <div class="number">
           <span class="minus"><i class="fa-solid fa-minus"></i></span>
-          <input class="value-input"  base_price="${price}" disabled name='numbs' type="text" value="1" />
-          <span product_id="${id}" class="plus"><i class="fa-solid fa-plus"></i></span>
+          <input class="value-input" base_price="${price}" disabled name='numbs' type="text" value="1" />
+          <span class="plus"><i class="fa-solid fa-plus"></i></span>
         </div>
         <button class="removeBtn">Премахни</button>
       </div>`);
@@ -298,21 +295,16 @@
       let plus = $('.plus');
         let minus = $('.minus');
         let priceMultiply = 0;
-        let priceMinus = 0;
 
         plus.on('click', function () {
-          let product_id = $(this).attr('product_id');
           let elParent = $(this).parent().parent();
           let inputField = elParent.find('.value-input');
           let inputNumber = parseFloat(inputField.val());
           let productPrice = inputField.attr('base_price');
-          let totalValue = $('#totalSum').val();
+        
           let productPriceElement = elParent.find('.list-product-price'); // updated this line
           // let productPrice = parseFloat(productPriceElement.text()); // updated this line
-          if(products[product_id].quantity<inputNumber+1){
-            console.log('error');
-            return;
-          }
+
           inputNumber += 1;
 
           inputField.val(inputNumber);
@@ -328,36 +320,33 @@
           productPriceElement.text(`${priceMultiply.toFixed(2)}лв.`); // updated this line
           
 
-          $('#totalSum').val((parseFloat( totalValue)+parseFloat(productPrice)).toFixed(2));
+          $('#totalSum').val(`${totalSum.toFixed(2)} лв.`);
         });
 
-        minus.on('click', function () {
+        минус.on('click', function () {
           let elParent = $(this).parent().parent();
           let inputField = elParent.find('.value-input');
           let inputNumber = parseFloat(inputField.val());
           let productPrice = inputField.attr('base_price');
-          let totalValue = $('#totalSum').val();
+        
           let productPriceElement = elParent.find('.list-product-price'); // updated this line
-          // let productPrice = parseFloat(productPriceElement.text()); // updated this line
 
-          inputNumber -= 1;
-          if (inputNumber < 1) {
-            return;
-          }
+          inputNumber += 1;
+
           inputField.val(inputNumber);
 
-         
+          if (inputNumber < 1) {
+            inputNumber = 1;
+          }
 
-          priceMinus = productPrice * inputNumber;
+          priceMultiply = productPrice * inputNumber;
           
          
 
-          productPriceElement.text(`${priceMinus.toFixed(2)}лв.`); // updated this line
+          productPriceElement.text(`${priceMultiply.toFixed(2)}лв.`); // updated this line
           
 
-          $('#totalSum').val((totalValue-productPrice).toFixed(2));
-
-          
+          $('#totalSum').val(`${totalSum.toFixed(2)} лв.`);
         });
 
 
@@ -394,7 +383,7 @@
 
         totalSum += numberPrice;
 
-        $('#totalSum').val(totalSum.toFixed(2));
+        $('#totalSum').val(`${totalSum.toFixed(2)} лв.`);
 
         //CODE FOR REMOVING THE PRODUCT//
         let removeBtn = $('.removeBtn');
@@ -415,7 +404,7 @@
 
           totalSum -= numberValue;
 
-          $('#totalSum').val(totalSum.toFixed(2));
+          $('#totalSum').val(`${totalSum.toFixed(2)} лв.`);
 
 
 
