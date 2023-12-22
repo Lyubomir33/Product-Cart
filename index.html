@@ -221,6 +221,10 @@
 
 
       let addedProducts = new Set();
+      let quantities = {};      
+      const footer = $('.footer-container');
+
+
 
       let addProduct = $('.buy-btn');
 
@@ -228,11 +232,20 @@
 
 
 
-        let parentElement = $(this).parent();
         let id = $(this).data('product-id');
-
+        let parentElement = $(this).parent();
         let image = parentElement.find('.image-prodcuts').attr('src');
         let price = parentElement.find('.product-price').text();
+        
+        let numberPrice = parseFloat(price);
+        let totalSum = parseFloat($('#totalSum').val()) || 0;
+
+        if (footerProducts.children('.product-list').length > 3) {
+          preventDefaul(totalSum);
+        }
+
+        totalSum += numberPrice;
+        $('#totalSum').val(totalSum.toFixed(2));
 
 
         if (footerProducts.children('.product-list').length >= 3) {
@@ -275,13 +288,16 @@
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-          }); return;
+          }); 
+            preventDefaul(totalSum);
+          return;
+          
         }
 
         addedProducts.add(id);
 
         footerProducts.append(`
-      <div class="product-list" id="${id}">
+        <div class="product-list" id="${id}" data-original-price="${price}">
         <div class="product-div">
           <div class="image-list"><img class="image-for-list" src="${image}"></div>
           <p class="list-product-price">${price}лв.</p>
@@ -316,50 +332,26 @@
 
 
 
-        let numberPrice = parseFloat(price);
 
-        let totalSum = parseFloat($('#totalSum').val()) || 0;
-
-        if (footerProducts.children('.product-list').length > 3) {
-          preventDefaul(totalSum);
-        }
-
-        totalSum += numberPrice;
-
-        $('#totalSum').val(totalSum.toFixed(2));
 
         //CODE FOR REMOVING THE PRODUCT//
 
-        let removeBtn = $('.removeBtn');
-
-
-
-        removeBtn.on('click', function () {
-
-          let checkoutProduct = $(this).parent('div');
-          let valueCheckout = checkoutProduct.find('.list-product-price').text();
-          let numberValue = parseFloat(valueCheckout);
-
+        footer.on('click', '.removeBtn', function () {
+          let productElement = $(this).parent('.product-list');
+          let originalPrice = parseFloat(productElement.data('original-price'));
+          let numberValue = parseFloat(productElement.find('.list-product-price').text());
 
           addedProducts.delete(id);
+          productElement.remove();
 
-          $(this).parent('div').remove();
-
-
-          totalSum -= numberValue;
-
+          totalSum -= originalPrice;
           $('#totalSum').val(totalSum.toFixed(2));
-
-
-
-
         });
 
 
 
       });
 
-      const footer = $('.footer-container');
 
       footer.on('click', '.plus', function () {
 
