@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/images/логото-снимка-removebg-preview.png">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
@@ -12,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -20,154 +19,63 @@
 </head>
 
 <body>
-
   <!-- HEADER START -->
-
-
   <div class="wave-container">
-
     <img class="logo-image" src="/images/логото-снимка-removebg-preview.png" alt="logo-image">
-
     <p class="text-in-header">SMART VENDING AUTOMATION</p>
-
-
   </div>
-
-
   <!-- HEADER END -->
-
-
   <!-- MAIN START -->
-
-
-
   <div class="drinks-food-snacks">
-
-
-
     <button class="options" data-filter="all">SHOW ALL</button>
     <button class="options" data-filter="drinks">DRINKS</button>
     <button class="options" data-filter="food">FOOD</button>
     <button class="options" data-filter="snacks">SNACKS</button>
     <button class="options" data-filter="cans">CANS</button>
-
   </div>
-
-
-
   <div class="arrows-with-main">
-
-    <div class="arrow-left">
-    </div>
-
+    <div class="arrow-left"></div>
     <!-- PRODUCTS START -->
-
     <div class="swiper-container container-with-products">
       <div class="swiper-wrapper">
         <!-- Swiper will dynamically add slides here -->
       </div>
-
-      <div class="swiper-button-next">
-      </div>
-
-      <div class="swiper-button-prev">
-      </div>
-
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-
     <!-- PRODUCTS END -->
-
-    <div class="arrow-right">
-    </div>
-
+    <div class="arrow-right"></div>
   </div>
-
   <!-- MAIN END -->
-
-
   </div>
-
   <!-- FOOTER START -->
-
-
   <div class="footer-container">
-
-
-
-
-
     <div class="checkout">
-
       <div class="cart-part">
         <i class="fa-solid fa-cart-plus"></i>
         <i class="fa-solid fa-circle-arrow-right"></i>
       </div>
-
       <div class="all-products-footer">
-
-        <!-- <div class="product-list">
-          <div class="product-div">
-            <div class="image-list"><img class="image-for-list" src="/images/7 days.jpg"></div>
-            <p class="list-product-price">2</p>
-          </div>
-          <div class="number">
-            <span id="minus"><i class="fa-solid fa-minus"></i></span>
-            <input id="input-numbers" class="value-input" type="text" value="1" />
-            <span id="plus"><i class="fa-solid fa-plus"></i></span>
-          </div>
-          <button class="removeBtn">Премахни</button>
-        </div>
-
-        <div class="product-list">
-
-          <div class="product-div">
-            <div class="image-list"><img class="image-for-list" src="/images/7 days.jpg"></div>
-            <p class="list-product-price">2</p>
-          </div>
-          <div class="number">
-            <span id="minus"><i class="fa-solid fa-minus"></i></span>
-            <input id="input-numbers" class="value-input" type="text" value="1" />
-            <span id="plus"><i class="fa-solid fa-plus"></i></span>
-          </div>
-          <button class="removeBtn">Премахни</button>
-        </div>
- -->
-
-
-
-
+        <!-- Products will be appended here dynamically -->
       </div>
-
       <div class="final-price-continueButton">
-
         <div class="final-price">
           <input disabled id="totalSum"></input><span class="levas">лв.</span>
         </div>
-
         <div class="continue-button">
           <button>ПРОДЪЛЖИ</button>
         </div>
-
       </div>
-
     </div>
-
-
-
-
-
   </div>
-
   <!-- FOOTER END -->
-
   <script>
-
-
     $(document).ready(function () {
+
+      localStorage.clear();
 
 
       let products = [
-
         { url: "coke-bottle.jpg", category: "drinks", title: "Coca-cola 330мл.", price: "1.50", quantity: 5, id: 0 },
         { url: 'coce-big.jpg', category: 'drinks', title: 'Coca-cola 1.5л.', price: '2.50', id: 1 },
         { url: 'green-fizzy-drink.jpg', category: 'drinks', title: 'Зелена газирана напитка', price: '2.49', quantity: 10, id: 2 },
@@ -187,188 +95,101 @@
         { url: 'sprite.jpg', category: 'cans', title: 'Sprite', price: '1.50', quantity: 4, id: 13 },
         { url: 'fanta.jpg', category: 'cans', title: 'Fanta', price: '1.50', quantity: 4, id: 14 },
         { url: '7up.jpg', category: 'cans', title: '7 up ', price: '1.50', quantity: 0, id: 15 },
-
-
-
       ];
-
-
-
-
-
-
 
       $.each(products, function (index, product) {
         let productSlide = $(`
         <div class="swiper-slide" data-category="${product.category}">
-          <div class="product-item" id="${product.id}" ">
+          <div class="product-item" data-product-id="${product.id}">
             <div class="image-wrapper"><img class="image-prodcuts" src="/images/${product.url}"></div>
             <h2 class="product-name">${product.title}</h2>
-            <p data-addProdPrice = "${product.price}" class="product-price">${product.price}</p>
+            <p data-addProdPrice="${product.price}" class="product-price">${product.price}</p>
             <p class="buy-btn" data-product-id="${product.id}"><i class="fa-solid fa-cart-plus"></i> ДОБАВИ</p>
           </div>
         </div>`);
-
         if (product.quantity > 1) {
           $('.swiper-wrapper').append(productSlide);
         }
-
       });
 
-
-
-
-
-
-      let addedProducts = new Set();
-      let quantities = {};      
-      const footer = $('.footer-container');
-
-
-
+      let quantities = {};
+      let footer = $('.footer-container');
+      let totalSum = 0;
       let addProduct = $('.buy-btn');
 
+      function updateTotalSum(price, quantity) {
+        totalSum += price * quantity;
+        return totalSum;
+      }
+
       addProduct.on('click', function () {
-
-
-
         let id = $(this).data('product-id');
         let parentElement = $(this).parent();
         let image = parentElement.find('.image-prodcuts').attr('src');
         let price = parentElement.find('.product-price').text();
-        
         let numberPrice = parseFloat(price);
         let totalSum = parseFloat($('#totalSum').val()) || 0;
 
-        if (footerProducts.children('.product-list').length > 3) {
-          preventDefaul(totalSum);
+        if (footer.find('.product-list').length >= 3) {
+          toastr["error"]("Достигнат е максималният лимит на количката - 3.", "", toastrConfig);
+          return;
         }
 
-        
+        if (localStorage.getItem(id)) {
+          toastr["warning"]("Продуктът вече е добавен в количката!", "", toastrConfig);
+          return;
+        }
 
+        let updatedTotalSum = updateTotalSum(numberPrice, 1);
         totalSum += numberPrice;
 
-        if (addedProducts.has(id)) {
-          toastr["warning"]("Продуктът вече е добавен в количката!", "", {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-top-center",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-          }); 
-          preventDefaul(totalSum);
-          return;
-          
-        }
+
+
 
         $('#totalSum').val(totalSum.toFixed(2));
-
-
-        if (footerProducts.children('.product-list').length >= 3) {
-
-          toastr["error"]("Достингат е максималния лимит на количката - 3.", "", {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-top-center",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "1500",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-          });
-
-          return;
-        }
-
-       
-
-        addedProducts.add(id);
-
-        footerProducts.append(`
-        <div class="product-list" id="${id}" data-original-price="${price}">
-        <div class="product-div">
-          <div class="image-list"><img class="image-for-list" src="${image}"></div>
-          <p class="list-product-price">${price}лв.</p>
-        </div>
-        <div class="number">
-          <span  product_id_minus='${id}' class="minus"><i class="fa-solid fa-minus"></i></span>
-          <input class="value-input"  base_price="${price}" disabled name='numbs' type="text" value="1" />
-          <span product_id="${id}" class="plus"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <button class="removeBtn">Премахни</button>
-      </div>`);
+        localStorage.setItem(id, true);
 
 
 
-        toastr["success"]("Продуктът беше добавен в количката", "", {
-          "closeButton": false,
-          "debug": false,
-          "newestOnTop": false,
-          "progressBar": false,
-          "positionClass": "toast-top-right",
-          "preventDuplicates": false,
-          "onclick": null,
-          "showDuration": "300",
-          "hideDuration": "1000",
-          "timeOut": "5000",
-          "extendedTimeOut": "1000",
-          "showEasing": "swing",
-          "hideEasing": "linear",
-          "showMethod": "fadeIn",
-          "hideMethod": "fadeOut"
-        });
-
-
-
-
-
-        //CODE FOR REMOVING THE PRODUCT//
-
-        footer.on('click', '.removeBtn', function () {
-          let productElement = $(this).parent('.product-list');
-          let originalPrice = parseFloat(productElement.data('original-price'));
-          let numberValue = parseFloat(productElement.find('.list-product-price').text());
-
-          addedProducts.delete(id);
-          productElement.remove();
-
-          totalSum -= originalPrice;
-          $('#totalSum').val(totalSum.toFixed(2));
-        });
-
-
-
+        footer.find('.all-products-footer').append(`
+        <div class="product-list" data-product-id="${id}" data-original-price="${price}">
+            <div class="product-div">
+                <div class="image-list"><img class="image-for-list" src="${image}"></div>
+                <p class="list-product-price">${price}лв.</p>
+            </div>
+            <div class="number">
+                <span  class="minus"><i class="fa-solid fa-minus"></i></span>
+                <input class="value-input"  base_price="${price}" disabled name='numbs' type="text" value="1" />
+                <span class="plus"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <button class="removeBtn">Премахни</button>
+        </div>`);
+        toastr["success"]("Продуктът беше добавен в количката", "", toastrConfig);
       });
 
+      footer.on('click', '.removeBtn', function () {
+        let productElement = $(this).parent('.product-list');
+        let originalPrice = parseFloat(productElement.data('original-price'));
+        let quantity = parseFloat(productElement.find('.value-input').val());
+        let productId = productElement.data('product-id');
+        totalSum -= originalPrice * quantity;
+        productElement.remove();
+        localStorage.removeItem(productId);
+        $('#totalSum').val(totalSum.toFixed(2));
+      });
 
       footer.on('click', '.plus', function () {
-
-        let priceMultiply = 0;
-
-        let product_id = $(this).attr('product_id');
+        let product_id = $(this).closest('.product-list').data('product-id');
         let elParent = $(this).parent().parent();
         let inputField = elParent.find('.value-input');
         let inputNumber = parseFloat(inputField.val());
-        let productPrice = inputField.attr('base_price');
+        let productPrice = parseFloat(inputField.attr('base_price'));
         let totalValue = $('#totalSum').val();
         let productPriceElement = elParent.find('.list-product-price');
+
+        if (inputNumber < 1) {
+          inputNumber = 1;
+        }
 
         if (products[product_id].quantity < inputNumber + 1) {
           toastr["error"]("Няма повече наличност от този продукт", "", {
@@ -390,106 +211,75 @@
           });
           return;
         }
+
         inputNumber += 1;
-
         inputField.val(inputNumber);
-
-        if (inputNumber < 1) {
-          inputNumber = 1;
-        }
-
-        priceMultiply = productPrice * inputNumber;
-
-
-
-        productPriceElement.text(`${priceMultiply.toFixed(2)}лв.`); // updated this line
-
-
+        let priceMultiply = productPrice * inputNumber;
+        productPriceElement.text(`${priceMultiply.toFixed(2)}лв.`);
+        totalSum += productPrice;
         $('#totalSum').val((parseFloat(totalValue) + parseFloat(productPrice)).toFixed(2));
-
-
       });
 
       footer.on('click', '.minus', function () {
-
-
-        let product_id_minus = $(this).attr('product_id_minus');
-
-
-        let priceMinus = 0;
-
         let elParent = $(this).parent().parent();
         let inputField = elParent.find('.value-input');
         let inputNumber = parseFloat(inputField.val());
-        let productPrice = inputField.attr('base_price');
+        let productPrice = parseFloat(inputField.attr('base_price'));
         let totalValue = $('#totalSum').val();
-        let productPriceElement = elParent.find('.list-product-price'); // updated this line
-        // let productPrice = parseFloat(productPriceElement.text()); // updated this line
-
+        let productPriceElement = elParent.find('.list-product-price');
         inputNumber -= 1;
         if (inputNumber < 1) {
           return;
         }
         inputField.val(inputNumber);
-
-
-
-        priceMinus = productPrice * inputNumber;
-
-
-
-        productPriceElement.text(`${priceMinus.toFixed(2)}лв.`); // updated this line
-
-
+        let priceMinus = productPrice * inputNumber;
+        productPriceElement.text(`${priceMinus.toFixed(2)}лв.`);
+        totalSum -= productPrice;
         $('#totalSum').val((totalValue - productPrice).toFixed(2));
-
       });
-
-
-
-      // END OF CODE FOR REMOVING THE PRODUCT
 
       let optionsBtn = $('.options');
       let containerProducts = $('.container-with-products');
       let footerProducts = $('.all-products-footer');
       let allProducts = $('.swiper-slide');
-
-
+      let toastrConfig = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "1500",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      };
       optionsBtn.on('click', function () {
-
         optionsBtn.removeClass('active');
-
         $(this).toggleClass('active');
-
         let value = $(this).data('filter');
-
         if (value === 'all') {
           allProducts.show('1000');
         } else {
           allProducts.hide('1000');
           $('.swiper-slide[data-category="' + value + '"]').show('1000');
         }
-
       });
-
-
-
+      var swiper = new Swiper('.container-with-products', {
+        slidesPerView: 5,  // Adjust this according to your design
+        spaceBetween: 3,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     });
-
-    var swiper = new Swiper('.container-with-products', {
-      slidesPerView: 5,  // Adjust this according to your design
-      spaceBetween: 3,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
-
-
-
   </script>
-
 </body>
 
 </html>
